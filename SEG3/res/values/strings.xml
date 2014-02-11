@@ -5,8 +5,8 @@
     <string name="action_settings">Settings</string>
     
     <!-- Login Activity -->
-    <string name="login_heading">Login</string>
+    <string name="login_heading">Welcome</string>
     <string name="patient_name">Name</string>
-    <string name="login_go">Go</string>
+    <string name="login_button">Log In</string>
 
 </resources>

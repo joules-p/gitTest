@@ -24,29 +24,30 @@
         android:id="@+id/patientLoginName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/patientAppointmentTime"
+        android:layout_alignRight="@+id/patientAppointmentTime"
         android:layout_below="@+id/loginHeading"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="80dp"
         android:ems="10"
-        android:text="@string/patient_name"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:hint="@string/patient_name" />
 
     <TimePicker
         android:id="@+id/patientAppointmentTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/patientLoginName"
+        android:layout_centerHorizontal="true"
         android:layout_below="@+id/patientLoginName"
         android:layout_marginTop="30dp" />
 
     <Button
-        android:id="@+id/loginGo"
+        android:id="@+id/loginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/patientAppointmentTime"
         android:layout_alignRight="@+id/patientAppointmentTime"
         android:layout_below="@+id/patientAppointmentTime"
         android:layout_marginTop="150dp"
-        android:text="@string/login_go" />
+        android:text="@string/login_button" />
 
 </RelativeLayout>
