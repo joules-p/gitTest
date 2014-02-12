@@ -13,10 +13,9 @@ import android.widget.TimePicker;
 public class LoginActivity extends Activity {
 
 	private String patientName;
-	private int appointmentHour;
-	private int appointmentMinute;
+	private String appointmentTime;
 	TextView tvPatientName;
-	TimePicker appointmentTime;
+	TimePicker timePicker;
 	Button loginButton;
 	 
 	
@@ -28,19 +27,18 @@ public class LoginActivity extends Activity {
         //set TextView, TimePicker and Button
         
         tvPatientName = (TextView) findViewById(R.id.patientLoginName);
-        appointmentTime = (TimePicker) findViewById(R.id.patientAppointmentTime);
+        timePicker = (TimePicker) findViewById(R.id.patientAppointmentTime);
         loginButton = (Button) findViewById(R.id.loginButton);
+        
+        // listener for Button
+        
         loginButton.setOnClickListener(new OnClickListener() { 
         	
 			@Override
 			public void onClick(View loginClick) {
 				// Store data re. name, time.  Direct user to video activity.
 				patientName = tvPatientName.getText().toString();
-				appointmentHour = appointmentTime.getCurrentHour();
-				
-				Log.v("hour", Integer.toString(appointmentHour));
-				Log.i("textview content", patientName);
-				
+				appointmentTime = Integer.toString(timePicker.getCurrentHour()) + "." + Integer.toString(timePicker.getCurrentMinute());
 			}
 		});
         
@@ -61,6 +59,14 @@ public class LoginActivity extends Activity {
     
     public String getPatientName() {
 		return patientName;
+	}
+    
+    public String getAppointmentTime() {
+		return appointmentTime;
+	}
+    
+    public void setAppointmentTime(String appointmentTime) {
+		this.appointmentTime = appointmentTime;
 	}
     
     
