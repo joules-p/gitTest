@@ -30,8 +30,8 @@ public class LoginActivity extends Activity {
         tvPatientName = (TextView) findViewById(R.id.patientLoginName);
         appointmentTime = (TimePicker) findViewById(R.id.patientAppointmentTime);
         loginButton = (Button) findViewById(R.id.loginButton);
-        loginButton.setOnClickListener(new OnClickListener() {
-			
+        loginButton.setOnClickListener(new OnClickListener() { 
+        	
 			@Override
 			public void onClick(View loginClick) {
 				// Store data re. name, time.  Direct user to video activity.
