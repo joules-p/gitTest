@@ -31,6 +31,7 @@ public class LoginActivity extends Activity {
         timePicker = (TimePicker) findViewById(R.id.patientAppointmentTime);
         loginButton = (Button) findViewById(R.id.loginButton);
         
+        //comm
         
         // listener for Button
         loginButton.setOnClickListener(new OnClickListener() { 
