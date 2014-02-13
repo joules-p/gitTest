@@ -33,12 +33,12 @@
         android:id="@+id/patientAppointmentTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/datePicker1"
+        android:layout_below="@+id/datePickerDOB"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp" />
 
     <DatePicker
-        android:id="@+id/datePicker1"
+        android:id="@+id/datePickerDOB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
