@@ -16,29 +16,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:text="@string/login_heading"
         android:textSize="50sp" />
-
-    <EditText
-        android:id="@+id/patientLoginName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/patientAppointmentTime"
-        android:layout_alignRight="@+id/patientAppointmentTime"
-        android:layout_below="@+id/loginHeading"
-        android:layout_marginTop="80dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/patient_name" />
-
-    <TimePicker
-        android:id="@+id/patientAppointmentTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/patientLoginName"
-        android:layout_marginTop="30dp" />
 
     <Button
         android:id="@+id/loginButton"
@@ -46,8 +26,24 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/patientAppointmentTime"
         android:layout_alignRight="@+id/patientAppointmentTime"
-        android:layout_below="@+id/patientAppointmentTime"
-        android:layout_marginTop="150dp"
+        android:layout_alignParentBottom="true"
         android:text="@string/login_button" />
+
+    <TimePicker
+        android:id="@+id/patientAppointmentTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/datePicker1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp" />
+
+    <DatePicker
+        android:id="@+id/datePicker1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/loginHeading"
+        android:layout_marginTop="50dp"
+        android:calendarViewShown="false" />
 
 </RelativeLayout>

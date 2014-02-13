@@ -6,7 +6,9 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
@@ -26,12 +28,11 @@ public class LoginActivity extends Activity {
         
         //set TextView, TimePicker and Button
         
-        tvPatientName = (TextView) findViewById(R.id.patientLoginName);
         timePicker = (TimePicker) findViewById(R.id.patientAppointmentTime);
         loginButton = (Button) findViewById(R.id.loginButton);
         
-        // listener for Button
         
+        // listener for Button
         loginButton.setOnClickListener(new OnClickListener() { 
         	
 			@Override
@@ -39,6 +40,8 @@ public class LoginActivity extends Activity {
 				// Store data re. name, time.  Direct user to video activity.
 				patientName = tvPatientName.getText().toString();
 				appointmentTime = Integer.toString(timePicker.getCurrentHour()) + "." + Integer.toString(timePicker.getCurrentMinute());
+				
+				Log.i("patientname", patientName);
 			}
 		});
         
